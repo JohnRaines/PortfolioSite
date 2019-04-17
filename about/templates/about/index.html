@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	{% load static %}
+		<title>John Raines - About</title>
+		<link rel="stylesheet" type="text/css" href={% static 'about/style.css' %}>
+	</head>
+	
+	<body>
+	<div class="container">
+		<!-- top nav bar -->
+		<div class="top-nav">
+			<a href={% url 'home' %} target="_self">JOHN RAINES</a>
+		</div>
+		
+		<!-- main content -->
+		<div class="text-content">
+			<h2>About the artist</h2>
+			<p>John Raines is an American painter, currently living in Alabama.</p>
+		</div>
+	</div>
+	</body>
+</html>

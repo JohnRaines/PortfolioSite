@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>John Raines - Contact</title>
+		<link rel="stylesheet" type="text/css" href={% static 'catalog/style.css' %}>
+	</head>
+	
+	<body>
+	<div class="container">
+		<!-- top nav bar -->
+		<div class="top-nav">
+			<a href={% url 'home' %} target="_self">JOHN RAINES</a>
+		</div>
+		
+		<div class = "form">
+			<form method="post">
+				{% csrf_token%}
+				{{form.as_p}}
+				
+				<button type="submit">Send</button>
+			</form>
+		</div>
+		
+		
+	</div>
+	</body>
+</html>

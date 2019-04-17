@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>John Raines - {{piece.title}}</title>
+		<link rel="stylesheet" type="text/css" href={% static 'catalog/style.css' %}>
+	</head>
+	
+	<body>
+	<div class="container">
+		<!-- top nav bar -->
+		<div class="top-nav">
+			<a href={% url 'home' %} target="_self">JOHN RAINES</a>
+		</div>
+		
+		<!-- picture -->
+		<div class="bigimg">
+			<img id="splash-image" src={%static piece.link %} title="{{piece.title}}">
+		</div>
+		
+		<!-- text -->
+		<div class="walltext">
+			<p>{{piece.title}}<br>{{piece.series_name}}<br>{{piece.text}}</p>
+			
+			<a href="{%url 'details' prev%}" target="_self">previous</a><br>
+			<a href="{%url 'details' next%}" target="_self">next</a><br>
+			<a href="{%url 'catalog'%}" target="_self">listings</a>
+		</div>
+		
+	</div>
+	</body>
+</html>

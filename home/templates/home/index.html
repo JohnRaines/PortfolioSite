@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>John Raines</title>
+		<link rel="stylesheet" type="text/css" href={% static 'home/index.css' %}>
+	</head>
+		
+	<body>
+	<div class="container">
+		<!-- title and nav links -->
+		<div class="title-container">
+			<div class="name">
+				<h1 dir="rtl">John Raines</h1>
+			</div>
+			<div class="nav">
+				<a href={%url 'aboutpage'%} target="_self">about</a>
+				<a href={%url 'catalog'%} target="_self">work</a>
+			</div>
+		</div>
+		
+		<!--big image-->
+		<div class="title-image">
+			<img id="splash-image" src={%static 'home/wilted.jpg'%} title="Wilted">
+		</div>
+	</div>
+	</body>
+</html>

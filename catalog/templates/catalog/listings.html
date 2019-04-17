@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>John Raines - Listings</title>
+		<link rel="stylesheet" type="text/css" href={% static 'catalog/style.css' %}>
+	</head>
+	
+	<body>
+	<div class="container">
+		<!-- top nav bar -->
+		<div class="top-nav">
+			<a href={% url 'home' %} target="_self">JOHN RAINES</a>
+		</div>
+		
+		<!-- index of works -->
+		<div class="linklist">
+			<h2>American Graffiti</h2>
+			{% for piece in pieces %}
+				{%if piece.series == 1%}
+					<a href="/catalog/details/{{piece.id}}">{{piece.title}}</a>
+				{%endif%}
+			{% endfor %}
+			
+		</div>
+	</div>
+	</body>
+</html>
